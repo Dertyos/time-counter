@@ -1,29 +1,32 @@
 import React from "react";
 
-export const Counter = ({ segundos, decenas, centenas, umil, dmil, cmil }) => {
+export const Counter = ({ parar, segundos, decenas, centenas, umil, dmil, cmil }) => {
+  
+  
+
   return (
     <>
-      <div className="container-fluid m-3 bg-black text-white row justify-content-center ">
-        <div className="col-2 border borderwidth-1px-gray ">
+      <div id="boxPrincipal">
+        <div className="box ">
           <i className="far fa-clock"></i>
         </div>
-        <div className="col-1 border borderwidth-1px-gray p-4 text-alig-center">
+        <div className="box ">
           {cmil}
         </div>
-        <div className="col-1 border borderwidth-1px-gray p-4 text-alig-center">
+        <div className="box ">
           {umil}
         </div>
-        <div className="col-1 border borderwidth-1px-gray p-4 text-alig-center">
+        <div className="box ">
           {centenas}
         </div>
-        <div className="col-1 border borderwidth-1px-gray p-4 text-alig-center">
+        <div className="box ">
           {decenas}
         </div>
-        <div className="col-1 border borderwidth-1px-gray p-4 text-alig-center">
+        <div className="box ">
           {segundos}
         </div>
       </div>
-      <div><button type="button" onClick={}></button></div>
+      <div id="boxPrincipal2"><button className="box2"type="button" onClick={parar}>Parar tiempo</button></div> 
     </>
   );
 };

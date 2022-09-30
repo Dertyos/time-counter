@@ -18,7 +18,7 @@ let dmil = 0
 let cmil = 0
 
 
-setInterval(() => {
+const tiempo = setInterval(() => {
     console.log(segundos)
 
     if (segundos > 9) {
@@ -45,12 +45,13 @@ setInterval(() => {
         }
     }
 
-    let const parar = () => {
-        
+    const parar = () => {
+        clearInterval(tiempo)
     }
 
-    ReactDOM.render(<Counter segundos={segundos} decenas={decenas} centenas={centenas} umil={umil} dmil={dmil} cmil={cmil} />, document.querySelector("#app"));
+    
+    ReactDOM.render(<Counter parar={parar} segundos={segundos} decenas={decenas} centenas={centenas} umil={umil} dmil={dmil} cmil={cmil} />, document.querySelector("#app"));
     segundos++
-}, 100)
+}, 1000)
 
 
